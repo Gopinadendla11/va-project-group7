@@ -82,4 +82,6 @@ multi_lc = alt.Chart(df2_transposed).mark_line().transform_fold(
     height=400
 ).interactive()
 
+st.write("This projects displays the Inventory sales prices of the Houses based on zillow dataset")
+
 multi_lc
