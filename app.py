@@ -21,18 +21,17 @@ st.write("This visulaization provides information on Sale prices for different t
 selected_home_type = st.selectbox('Select Home Type',('All Homes','Single Family Homes','One Bed Room Homes','Two Bed Room Homes',
                                     'Three Bed Room Homes','Four Bed Room Homes','Five Plus Bed Room Homes'))
 
-match selected_home_type:
-    case 'Single Family Homes':
+if selected_home_type == 'Single Family Homes':
         df = df_single_home_city
-    case 'One Bed Room Homes':
+elif selected_home_type ==  'One Bed Room Homes':
         df = df_1br_city
-    case 'Two Bed Room Homes':
+elif selected_home_type == 'Two Bed Room Homes':
         df = df_2br_city
-    case 'Three Bed Room Homes':
+elif selected_home_type == 'Three Bed Room Homes':
         df = df_3br_city
-    case 'Four Bed Room Homes':
+elif selected_home_type == 'Four Bed Room Homes':
         df = df_4br_city
-    case 'Five Plus Bed Room Homes':
+elif selected_home_type == 'Five Plus Bed Room Homes':
         df = df_5br_city
 
 df2 = df.drop(['RegionID', 'SizeRank', 'RegionType','StateName'], axis = 1)
