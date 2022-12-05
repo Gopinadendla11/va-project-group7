@@ -5,7 +5,7 @@ import numpy as np
 from vega_datasets import data
 from state_Codes import us_state_to_abbrev
 
-df_1br_city = pd.read_csv('Datasets\City\oneBedRoom_City.csv')
+#df_1br_city = pd.read_csv('Datasets\City\oneBedRoom_City.csv')
 df_2br_city = pd.read_csv('Datasets\City\TwoBedRoom_City.csv')
 df_3br_city = pd.read_csv('Datasets\City\ThreeBedRoom_City.csv')
 df_4br_city = pd.read_csv('Datasets\City\FourBedRoom_City.csv')
@@ -24,7 +24,7 @@ selected_home_type = st.selectbox('Select Home Type',('All Homes','Single Family
 if selected_home_type == 'Single Family Homes':
         df = df_single_home_city
 elif selected_home_type ==  'One Bed Room Homes':
-        df = df_1br_city
+        df = df_2br_city
 elif selected_home_type == 'Two Bed Room Homes':
         df = df_2br_city
 elif selected_home_type == 'Three Bed Room Homes':
