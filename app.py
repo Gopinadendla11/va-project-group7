@@ -21,7 +21,6 @@ st.write("This visulaization provides information on Sale prices for different t
 selected_home_type = st.selectbox('Select Home Type',('All Homes','Single Family Homes','One Bed Room Homes','Two Bed Room Homes',
                                     'Three Bed Room Homes','Four Bed Room Homes','Five Plus Bed Room Homes'))
 
-
 match selected_home_type:
     case 'Single Family Homes':
         df = df_single_home_city
