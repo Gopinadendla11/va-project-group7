@@ -62,7 +62,7 @@ def get_city_list(state):
 
 
 col1, col2 = st.columns(2)
-selected_state = col1.selectbox('Select First State:', states_list)
+selected_state = col1.selectbox('Select First State:', states_list,index=1)
 list_cities = get_city_list(selected_state)
 selected_city = col2.multiselect('Select Cities in the first state:', list_cities, list_cities[:2])
 
@@ -154,7 +154,7 @@ st.write(choropleth_map)
 
 # Bar Chart for appreciation
 
-st.subheader("Bar Chart for Percentage appreciation in differnt cities")
+st.subheader("Bar Chart for Percentage appreciation in different cities")
 
 
 col_state_bar, col_year_bar = st.columns(2)
@@ -169,8 +169,8 @@ df_tst = df_all_homes_city.iloc[1:, :]
 
 df_tst = df_tst.drop(
     ['RegionID', 'SizeRank', 'RegionType'], axis=1)
-list_month_dates = return_date_list('2021')
-list_month_dates_last_year = return_date_list('2020')
+list_month_dates = return_date_list(int(selected_year_bar))
+list_month_dates_last_year = return_date_list(int(selected_year_bar)-1)
 df_curent_year = round(df_tst.groupby(['RegionName'])[
                 list_month_dates].mean(), 2).reset_index()
 df_last_year = round(df_tst.groupby(['RegionName'])[
