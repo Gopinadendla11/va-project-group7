@@ -26,8 +26,6 @@ for columns in df2_transposed.columns:
 
 df2_transposed.columns = array
 
-
-
 col_values = df['RegionName'].tolist()
 area_list = [['', 'USA']]
 
