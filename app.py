@@ -16,7 +16,7 @@ df_all_homes_city = pd.read_csv('Datasets/City/AllHomes_City.csv')
 df = df_all_homes_city
 
 st.subheader('Line Chart for Median Sales Prices of Houses')
-st.write("This visulaization provides information on Sale prices for different type of homes in many cities of United States over the past 20 years.")
+st.write("This visualization provides information on Sale prices for different types of homes in many cities of the United States for over the past 20 years.")
 
 selected_home_type = st.selectbox('Select Home Type', ('All Homes', 'Single Family Homes', 'One Bed Room Homes', 'Two Bed Room Homes',
                                                        'Three Bed Room Homes', 'Four Bed Room Homes', 'Five Plus Bed Room Homes'))
