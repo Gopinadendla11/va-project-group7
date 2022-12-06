@@ -154,7 +154,7 @@ st.write(choropleth_map)
 
 # Bar Chart for appreciation
 
-st.subheader("Bar Chart for Percentage appreciation in different cities")
+st.subheader("Bar Chart for Percentage Appreciation in Different Cities")
 st.write("This Bar Chart shows the percentage of appreciation of home values across differnt cities of the United states in the past 10 years.")
 
 
