@@ -16,7 +16,7 @@ df_all_homes_city = pd.read_csv('Datasets/City/AllHomes_City.csv')
 df = df_all_homes_city
 
 st.subheader('Line Chart for Median Sales Prices of Houses')
-st.write("This visualization provides information on Sale prices for different types of homes in many cities of the United States for over the past 20 years.")
+st.write("This visualization provides information on sales prices for different types of homes in many cities of the United States for over the past 20 years.")
 
 selected_home_type = st.selectbox('Select Home Type', ('All Homes', 'Single Family Homes', 'One Bed Room Homes', 'Two Bed Room Homes',
                                                        'Three Bed Room Homes', 'Four Bed Room Homes', 'Five Plus Bed Room Homes'))
@@ -90,7 +90,7 @@ st.write(line_chart)
 
 # Choropleth Map
 st.subheader('Choropleth Map of Zillow Housing Prices in the US')
-st.write("This visulaization gives insights into housing prices in different states of United States over the past 10 years. You can select any year or month from the below dropdown to view the average housing prices.")
+st.write("This visualization gives insights into housing prices in different states of the United States over the past 10 years. You can select any year or month from the dropdown menus to view the average housing prices.")
 
 df_all_homes_states = pd.read_csv("Datasets/States/sale_prices_state.csv")
 df_all_homes_states['StateName'] = df_all_homes_states['RegionName'].map(
@@ -155,7 +155,7 @@ st.write(choropleth_map)
 # Bar Chart for appreciation
 
 st.subheader("Bar Chart for Percentage appreciation in different cities")
-st.write("This bar Chart shows the percentage of appreciation of Home values across differnt cities of the United states in the past 10 years")
+st.write("This Bar Chart shows the percentage of appreciation of home values across differnt cities of the United states in the past 10 years.")
 
 
 col_state_bar, col_year_bar = st.columns(2)
